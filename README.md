@@ -2,7 +2,7 @@
 
 A high level library for creating Universal Variable with PHP.
 
-__Current version:__ 1.0.0
+__Version:__ 1.0.0
 
 ## Introduction
 
@@ -10,6 +10,8 @@ Universal Variable (UV) always requires some server-side development work to ins
 intimate knowledge of client-side JavaScript.
 
 This library is not prescriptive - it can be used to create the standard UV data layer, as well as extending it for more advanced and custom functionality.
+
+Support the [Universal Variable Specification](https://github.com/QubitProducts/UniversalVariable) version 1.1.1.
 
 Requires PHP version >= 5.2.0. [Find out more](#older-versions-of-php).
 
@@ -38,6 +40,9 @@ git clone git@github.com:QubitProducts/universal-variable-php-library.git
 
 Include the `uv_library.php` file in any models/templates where you wish to instantiate UV.
 
+### Older versions of PHP
+
+PHP version >= 5.20 is required for the `json_encode` function. However, if you're on an older version of PHP you can enable this function by installing the [PECL package](http://pecl.php.net/package/json) directly.
 
 
 ## API
@@ -158,10 +163,6 @@ $uv->add(array(
 ));
 ```
 
-
-## Older versions of PHP
-
-PHP version >= 5.20 is required for the `json_encode` function. However, if you're on an older version of PHP you can enable this function by installing the [PECL package](http://pecl.php.net/package/json) directly.
 
 
 
