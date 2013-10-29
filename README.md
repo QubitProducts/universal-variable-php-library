@@ -5,12 +5,12 @@ A high level library for creating Universal Variable with PHP.
 
 ## Introduction
 
-Universal Variable (UV) always requires some server-side development work to instantiate on each page of websites. At [Qubit](http://qubitproducts.com) we've created a PHP library to assist with this, thus requiring a little less 
+Universal Variable (UV) always requires some server-side development work to instantiate on each page of a website. At [Qubit](http://qubitproducts.com) we've created a PHP library to assist with this, thus requiring a little less 
 intimate knowledge of client-side JavaScript.
 
 This library is not prescriptive - it can be used to create the standard UV data layer, as well as extending it for more advanced and custom functionality.
 
-Requires PHP version 5.2.0 or greater.
+Requires PHP version >= 5.2.0.
 
 
 ## Example
@@ -22,7 +22,7 @@ $uv = new BuildUV();
 $uv->get("page")->set("category", "Home");
 $uv->get("page")->set("subcategory", "Mens - Shoes");
 
-print $uv->toJSON()
+print $uv->toJSON();
 => {"page":{"category":"Home","subcategory":"Mens - Shoes"},"user":{},"events":[]}
 ```
 
@@ -32,7 +32,7 @@ print $uv->toJSON()
 Download the library directly from Github:
 
 ```
-git clone tbc@tbc.com
+git clone git@github.com:QubitProducts/universal-variable-php-library.git
 ```
 
 Include the `uv_library.php` file in any models/templates where you wish to instantiate UV.
