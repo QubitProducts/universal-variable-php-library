@@ -62,11 +62,14 @@ This automatically instantiates the standard specification object variables:
 
 ### get
 
-Retreive a varaible within the UV. Works with any pre-declared variables.
+Retrieve a variable within the UV. Works with any pre-declared variables, and further variables you may define
 
 ```php
 $uv->get("page")
 => UVObject Object ( )
+
+$uv->get("page")->get("category")
+=> "Home"
 ```
 
 The `get` method is usually only used to retreive a variable prior to setting one of its children.
@@ -153,6 +156,11 @@ $uv->add(array(
   "action" => "button_click"
 ));
 ```
+
+
+## Older versions of PHP
+
+PHP version >= 5.20 is required for the `json_encode` function. However, if you're on an older version of PHP you can enable this function by installing the [PECL package](http://pecl.php.net/package/json) directly.
 
 
 
