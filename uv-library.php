@@ -1,5 +1,8 @@
 <?php
 
+  define("UV_VERSION", "1.1.1");
+  define("UV_LIB_VERSION", "1.0.0");
+
   class UVArray extends UVObject {
 
     public function add($object) {
@@ -102,6 +105,8 @@
       $uvOutput["page"] = $this->page->toArray();
       $uvOutput["user"] = $this->user->toArray();
       $uvOutput["events"] = $this->events->toArray();
+      $uvOutput["version"] = UV_VERSION;
+      $uvOutput["php_lib_version"] = UV_LIB_VERSION;
 
       $vars = get_object_vars($this);
       foreach ($vars as $key => $value) {
@@ -121,10 +126,11 @@
 
     public function toHTML() {
       return "\n
-      <!-- Qubit Universal Variable data layer -->
+      <!-- Qubit Universal Variable data layer v" + UV_VERSION + " - PHP Lib v" + UV_LIB_VERSION + " -->
       <script>
         window.universal_variable = " . $this->toJSON() . ";
       </script>
+      <!-- End UV -->
       \n";
     }
 
