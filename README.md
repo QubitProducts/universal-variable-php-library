@@ -2,7 +2,7 @@
 
 A high level library for creating Universal Variable with PHP.
 
-Current version: 1.0.0
+__Current version:__ 1.0.0
 
 ## Introduction
 
