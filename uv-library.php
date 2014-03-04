@@ -1,7 +1,7 @@
 <?php
 
-  define("UV_VERSION", "1.1.1");
-  define("UV_LIB_VERSION", "1.0.0");
+  define("UV_VERSION", "1.2.0");
+  define("UV_LIB_VERSION", "1.0.1");
 
   class UVArray extends UVObject {
 
@@ -61,6 +61,8 @@
         return true;
       } else if (count($vars) === 1 && isset($vars["items"]) && count(get_object_vars($vars["items"])) == 0) {
         return true;
+      } else if (count($vars) === 2 && isset($vars["linked_products"]) && count(get_object_vars($vars["linked_products"])) == 0 && isset($vars["reviews"]) && count(get_object_vars($vars["reviews"])) == 0) {
+        return true;
       } else {
         return false;
       }
@@ -90,6 +92,8 @@
       $this->set("page", new UVObject());
       $this->set("user", new UVObject());
       $this->set("product", new UVObject());
+      $this->get("product")->set("linked_products", new UVArray());
+      $this->get("product")->set("reviews", new UVArray());
       $this->set("listing", new UVObject());
       $this->get("listing")->set("items", new UVArray());
       $this->set("transaction", new UVObject());
@@ -97,6 +101,7 @@
       $this->set("basket", new UVObject());
       $this->get("basket")->set("line_items", new UVArray());
       $this->set("events", new UVArray());
+      $this->set("recommendation", new UVArray());
     }
 
     public function toJSON() {
