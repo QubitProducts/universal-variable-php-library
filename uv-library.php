@@ -126,7 +126,7 @@
 
     public function toHTML() {
       return "\n
-      <!-- Qubit Universal Variable data layer v" . UV_VERSION . " - PHP Lib v" . UV_LIB_VERSION + " -->
+      <!-- Qubit Universal Variable data layer v" . UV_VERSION . " - PHP Lib v" . UV_LIB_VERSION . " -->
       <script>
         window.universal_variable = " . $this->toJSON() . ";
       </script>
