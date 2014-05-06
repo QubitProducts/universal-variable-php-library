@@ -2,7 +2,7 @@
 
 A high level library for creating Universal Variable with PHP.
 
-__Version: 1.0.0__
+__Version: 1.0.1__
 
 ## Introduction
 
@@ -11,7 +11,7 @@ intimate knowledge of client-side JavaScript.
 
 This library is not prescriptive - it can be used to create the standard UV data layer, as well as extending it for more advanced and custom functionality.
 
-Support the [Universal Variable Specification](https://github.com/QubitProducts/UniversalVariable) version 1.1.1.
+Support the [Universal Variable Specification](http://docs.qubitproducts.com/uv/specification/) version 1.2.1.
 
 Requires PHP version >= 5.2.0. [Find out more](#older-versions-of-php).
 
