@@ -22,11 +22,11 @@ Create a page object within the UV and return json.
 
 ```php
 $uv = new BuildUV();
-$uv->get("page")->set("category", "Home");
-$uv->get("page")->set("subcategory", "Mens - Shoes");
+$uv->get("page")->set("type", "category");
+$uv->get("page")->set("breadcrumb", array("mens", "shoes"));
 
 print $uv->toJSON();
-=> {"page":{"category":"Home","subcategory":"Mens - Shoes"},"user":{},"events":[]}
+=> {"page":{"type":"category","breadcrumb":["mens", "shoes"]},"user":{},"events":[]}
 ```
 
 
