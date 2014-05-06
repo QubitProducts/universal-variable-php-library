@@ -1,6 +1,6 @@
 <?php
 
-  define("UV_VERSION", "1.2.0");
+  define("UV_VERSION", "1.2.1");
   define("UV_LIB_VERSION", "1.0.1");
 
   class UVArray extends UVObject {
